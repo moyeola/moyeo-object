@@ -1,4 +1,4 @@
-const CommonConstant = {
+export const CommonConstant = {
     USER_NAME_MAX_LENGTH: 10,
     USER_NAME_PREFIX_MAX_LENGTH: 25,
     GROUP_NAME_MAX_LENGTH: 50,

@@ -1,24 +1,25 @@
-import { Column, Entity, ManyToOne } from 'typeorm';
-import { BaseEntity } from './common/baseEntity';
-import { UserEntity } from './user.entity';
-import { GroupEntity } from './group.entity';
-import { GroupRole } from 'src/enum';
-import { IsNotEmpty, MaxLength } from 'class-validator';
+import { Column, Entity, ManyToOne } from "typeorm";
+import { BaseEntity } from "./common/baseEntity";
+import { UserEntity } from "./user.entity";
+import { GroupEntity } from "./group.entity";
+import { GroupRole } from "src/enum";
+import { MaxLength } from "class-validator";
+import { CommonConstant } from "src/constant";
 
-@Entity('member')
+@Entity("member")
 export class MemberEntity extends BaseEntity {
     @ManyToOne(() => UserEntity, (user) => user.members, {
-        onDelete: 'CASCADE',
+        onDelete: "CASCADE",
     })
     user: UserEntity;
 
     @ManyToOne(() => GroupEntity, (group) => group.members, {
-        onDelete: 'CASCADE',
+        onDelete: "CASCADE",
     })
     group: GroupEntity;
 
     @Column({
-        type: 'enum',
+        type: "enum",
         enum: GroupRole,
         default: GroupRole.MEMBER,
     })
@@ -29,7 +30,7 @@ export class MemberEntity extends BaseEntity {
     })
     @MaxLength(
         CommonConstant.USER_NAME_PREFIX_MAX_LENGTH +
-            CommonConstant.USER_NAME_MAX_LENGTH,
+            CommonConstant.USER_NAME_MAX_LENGTH
     )
     nickname?: string;
 

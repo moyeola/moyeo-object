@@ -1,9 +1,10 @@
-import { Column, Entity, ManyToMany, OneToMany } from 'typeorm';
-import { BaseEntity } from './common/baseEntity';
-import { IsNotEmpty, MaxLength } from 'class-validator';
-import { MemberEntity } from './member';
+import { Column, Entity, OneToMany } from "typeorm";
+import { BaseEntity } from "./common/baseEntity";
+import { IsNotEmpty, MaxLength } from "class-validator";
+import { MemberEntity } from "./member";
+import { CommonConstant } from "src/constant";
 
-@Entity('group')
+@Entity("group")
 export class GroupEntity extends BaseEntity {
     @Column()
     @IsNotEmpty()
@@ -12,7 +13,7 @@ export class GroupEntity extends BaseEntity {
 
     @Column({
         nullable: true,
-        default: '',
+        default: "",
     })
     @MaxLength(CommonConstant.GROUP_DESCRIPTION_MAX_LENGTH)
     description?: string;
