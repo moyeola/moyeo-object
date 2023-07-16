@@ -1,0 +1,44 @@
+import { Auth, Column, Entity, ManyToMany, OneToMany } from 'typeorm';
+import { BaseEntity } from './common/baseEntity';
+import { IsNotEmpty, MaxLength } from 'class-validator';
+import { UserStatus } from 'src/enum';
+import { PermissionEntity } from './permission.entity';
+import { AuthEntity } from './auth.entity';
+import { GroupEntity } from './group.entity';
+import { MemberEntity } from './member';
+
+@Entity('user')
+export class UserEntity extends BaseEntity {
+    @Column()
+    @IsNotEmpty()
+    @MaxLength(
+        CommonConstant.USER_NAME_PREFIX_MAX_LENGTH +
+            CommonConstant.USER_NAME_MAX_LENGTH,
+    )
+    name: string;
+
+    @Column({ type: 'text' })
+    profileImageUrl: string;
+
+    @Column({
+        type: 'enum',
+        enum: UserStatus,
+        default: UserStatus.NEW,
+    })
+    status: UserStatus;
+
+    @OneToMany(() => MemberEntity, (member) => member.user)
+    members: MemberEntity[];
+
+    @OneToMany(() => PermissionEntity, (permission) => permission.user)
+    permissions: PermissionEntity[];
+
+    @OneToMany(() => AuthEntity, (auth) => auth.user)
+    auth: Auth;
+
+    static create(): UserEntity {
+        const user = new UserEntity();
+
+        return user;
+    }
+}
