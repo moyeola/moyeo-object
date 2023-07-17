@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "description": "모여! 개발에 사용되는 오브젝트(Entity, Dto) 라이브러리",
     "main": "dist/index.js",
-    "repository": "https://github.com/moyeola/meyeo-object.git",
+    "repository": "https://github.com/moyeola/moyeo-object.git",
     "author": "혀느현스 <hyuns@hyuns.dev>",
     "license": "GPL-3.0",
     "private": false,

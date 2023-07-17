@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="assets/moyeo_logo.png" width="10%" alt="Meyeo Logo" />
+  <img src="assets/moyeo_logo.png" width="10%" alt="moyeo Logo" />
 </p>
-<h1 align="center">@meyeo/meyeo-object</h1>
+<h1 align="center">moyeo-object</h1>
 <h5 align="center">모여! 개발을 위한 오브젝트(Dto, Entity) 라이브러리</h5>
 <p align="center">
     <a href="LICENSE"><img alt="GPLv3 License" src="https://img.shields.io/badge/License-GPLv3-blue"/></a>
@@ -17,9 +17,9 @@
 ### Install
 
 ```
-npm install @meyeo/meyeo-object
+npm install moyeo-object
 
-yarn add @meyeo/meyeo-object
+yarn add moyeo-object
 ```
 
 ### Usage
@@ -30,7 +30,7 @@ yarn add @meyeo/meyeo-object
 
 ## 라이브러리 소개
 
-`@meyeo/meyeo-object` 라이브러리는 크게 6가지로 분류되어 사용됩니다.
+`moyeo-object` 라이브러리는 크게 6가지로 분류되어 사용됩니다.
 
 -   `constant`: 서비스에 사용되는 주요 상수 (필터링 조건 등)
 -   `dto`: 서비스에서 반복되어 사용되는 DTO (Data Transfer Object)
@@ -56,7 +56,7 @@ yarn add @meyeo/meyeo-object
 
 ### 이렇게 오브젝트를 별도의 라이브러리로 분리하는 이유가 뭔가요?
 
-`@meyeo/meyeo-object` 처럼 프로젝트에 사용되는 객체와 타입을 분리할 경우 동일한 데이터에 대해 코드를 여러번 작성하지 않아도 됩니다. 이를 통해 데이터의 일관성과 개발의 편리성을 챙길 수 있습니다.
+`moyeo-object` 처럼 프로젝트에 사용되는 객체와 타입을 분리할 경우 동일한 데이터에 대해 코드를 여러번 작성하지 않아도 됩니다. 이를 통해 데이터의 일관성과 개발의 편리성을 챙길 수 있습니다.
 
 -   동일한 데이터를 다루기 위해 코드를 재작성할 필요가 없습니다.
 -   타입 등이 변경되었을 때 라이브러리를 업데이트하여 타입 검사를 할 수 있습니다.
@@ -70,14 +70,14 @@ yarn add @meyeo/meyeo-object
 
 `모여!` 의 경우 프론트엔드로 `React`를 사용하고, 백엔드로 `NestJS`를 사용합니다. 두 라이브러리/프레임워크 모두 타입스크립트를 통해 작성되므로, FE와 BE에서 중복으로 작성되는 코드를 별도의 라이브러리로 분리할 수 있습니다.
 
-그러나 일반적인 프로젝트의 경우 프론트엔드와 백엔드가 서로 다른 언어를 사용하는 경우도 많아 `@meyeo/meyeo-object`와 같은 방법을 사용하지 못할 수 있습니다.
+그러나 일반적인 프로젝트의 경우 프론트엔드와 백엔드가 서로 다른 언어를 사용하는 경우도 많아 `moyeo-object`와 같은 방법을 사용하지 못할 수 있습니다.
 
--   `@meyeo/meyeo-object`에 대한 의존성으로 인해 유연성이 감소합니다.
+-   `moyeo-object`에 대한 의존성으로 인해 유연성이 감소합니다.
 
-일반적인 프로젝트에서는 데이터 타입을 해당 프로젝트 내에서 관리하므로, 데이터가 변경되었을 때 프로젝트에서 직접 수정하면 됩니다. 그러나 `@meyeo/meyeo-object`와 같은 구조를 사용할 경우 타입을 외부에서 관리하므로 `코드 수정 -> PR -> Merge -> NPM Deploy` 의 과정을 거쳐야 하므로 번거러울 수 있습니다.
+일반적인 프로젝트에서는 데이터 타입을 해당 프로젝트 내에서 관리하므로, 데이터가 변경되었을 때 프로젝트에서 직접 수정하면 됩니다. 그러나 `moyeo-object`와 같은 구조를 사용할 경우 타입을 외부에서 관리하므로 `코드 수정 -> PR -> Merge -> NPM Deploy` 의 과정을 거쳐야 하므로 번거러울 수 있습니다.
 
 다만 이 문제는 데이터에 대한 일관성을 높이기 위한 어쩔 수 없는 부분입니다.
 
-이러한 유연성 문제를 해결하기 위해서는 **팀원간의 소통**이 굉장히 중요합니다. 속성을 변경해야하는 경우 최대한 하위호환성을 고려하여 변경하고, 만약 하위호환성을 확보할 수 없다면 소통을 통해 마이그레이션을 위한 작업을 해야 합니다. 만약 팀의 규모가 커 이러한 소통이 어렵다면 `@meyeo/meyeo-object` 같은 구조를 추천하기 어려울 수 있습니다.
+이러한 유연성 문제를 해결하기 위해서는 **팀원간의 소통**이 굉장히 중요합니다. 속성을 변경해야하는 경우 최대한 하위호환성을 고려하여 변경하고, 만약 하위호환성을 확보할 수 없다면 소통을 통해 마이그레이션을 위한 작업을 해야 합니다. 만약 팀의 규모가 커 이러한 소통이 어렵다면 `moyeo-object` 같은 구조를 추천하기 어려울 수 있습니다.
 
 다행히 `모여!`팀은 디자이너 한 분과 FE 개발자 한 분, 그리고 FE&BE 개발자로 구성되어 있어 개발에 대한 소통을 원활하게 진행할 수 있습니다.

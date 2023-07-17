@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../assets/moyeo_logo.png" width="10%" alt="Meyeo Logo" />
+  <img src="../../assets/moyeo_logo.png" width="10%" alt="moyeo Logo" />
 </p>
 <h1 align="center">/endpoint</h1>
 <h5 align="center">모여! 엔드포인트 정보와 관련 DTO</h5>
@@ -23,11 +23,11 @@
      * 가이드 작성을 위한 엔드포인트입니다.
      */
     export const PostEndpoint: Endpoint<PostEndpointReq, PostEndpointRes> = {
-        method: 'POST',
+        method: "POST",
         path: (e) => `/endpoint/${e.endpointId}`,
-        bodyParams: ['body'],
-        queryParams: ['query'],
-        pathParams: ['endpointId'],
+        bodyParams: ["body"],
+        queryParams: ["query"],
+        pathParams: ["endpointId"],
     };
 
     export interface PostEndpointReqBody {

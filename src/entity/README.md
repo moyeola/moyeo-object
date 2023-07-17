@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../assets/moyeo_logo.png" width="10%" alt="Meyeo Logo" />
+  <img src="../../assets/moyeo_logo.png" width="10%" alt="moyeo Logo" />
 </p>
 <h1 align="center">/entity</h1>
 <h5 align="center">모여! 개발에 사용되는 Entity</h5>
