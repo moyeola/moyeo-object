@@ -26,7 +26,7 @@ export class MemberDto {
         this.id = id;
         this.nickname = nickname;
         this.role = role;
-        this.user = user;
-        this.group = group;
+        this.user = new UserDto(user);
+        this.group = new GroupDto(group);
     }
 }

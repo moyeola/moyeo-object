@@ -16,7 +16,7 @@ export class ReportDto {
         reporter: UserDto;
     }) {
         this.id = id;
-        this.user = user;
-        this.reporter = reporter;
+        this.user = new UserDto(user);
+        this.reporter = new UserDto(reporter);
     }
 }
