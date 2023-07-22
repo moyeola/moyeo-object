@@ -17,14 +17,14 @@ export class MemberDto {
         group,
     }: {
         id: number;
-        nickname: string;
+        nickname?: string;
         role: "OWNER" | "MEMBER";
 
         user?: UserDto;
         group?: GroupDto;
     }) {
         this.id = id;
-        this.nickname = nickname;
+        this.nickname = nickname || user.name;
         this.role = role;
         this.user = new UserDto(user);
         this.group = new GroupDto(group);
