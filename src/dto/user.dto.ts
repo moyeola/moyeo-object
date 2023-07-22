@@ -3,4 +3,7 @@ export class UserDto {
     name: string;
     profileImageUrl: string;
     status: "NEW" | "ACTIVE";
+    permissions: {
+        permission: "ADMIN";
+    }[];
 }
