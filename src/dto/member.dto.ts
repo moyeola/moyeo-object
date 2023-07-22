@@ -6,6 +6,6 @@ export class MemberDto {
     nickname: string;
     role: "OWNER" | "MEMBER";
 
-    user: UserDto;
-    group: GroupDto;
+    user?: UserDto;
+    group?: GroupDto;
 }
