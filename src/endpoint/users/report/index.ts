@@ -1,6 +1,5 @@
-import { ReportDto } from 'src/dto/report.dto';
-import { Endpoint } from 'endpoint-client';
-import { ReportReasonEnum } from 'src/enum/report.enum';
+import { ReportDto } from "src/dto/report.dto";
+import { Endpoint } from "endpoint-client";
 
 /**
  * POST /users/:userId/reports
@@ -8,17 +7,17 @@ import { ReportReasonEnum } from 'src/enum/report.enum';
  */
 export const PostUserReports: Endpoint<PostUserReportsReq, PostUserReportsRes> =
     {
-        method: 'POST',
+        method: "POST",
         path: (e) => `/users/${e.userId}/reports`,
-        pathParams: ['userId'],
-        bodyParams: ['reason'],
+        pathParams: ["userId"],
+        bodyParams: ["reason"],
     };
 export type PostUserReportsReqPath = {
     userId: string;
 };
 export type PostUserReportsReqBody = {
     reason?: string;
-    type: ReportReasonEnum;
+    type: "SPAM" | "GENERAL";
 };
 export type PostUserReportsReq = PostUserReportsReqBody &
     PostUserReportsReqPath;
