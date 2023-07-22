@@ -32,10 +32,8 @@ yarn add moyeo-object
 
 `moyeo-object` 라이브러리는 크게 6가지로 분류되어 사용됩니다.
 
--   `constant`: 서비스에 사용되는 주요 상수 (필터링 조건 등)
 -   `dto`: 서비스에서 반복되어 사용되는 DTO (Data Transfer Object)
 -   `endpoint`: 서비스 API의 Endpoint DTO와 정보를 담은 객체
--   `enum`: 서비스에 사용되는 Enum
 -   `type`: 서비스에 사용되는 Type
 
 각 객체들은 서로 연관관계를 가지고 있을 수 있습니다. (ex. endpoint에서 dto를 참조)
@@ -44,10 +42,8 @@ yarn add moyeo-object
 
 각 분류별 개발, 사용 방법은 해당 디렉토리의 `README.md`를 참고해주세요.
 
--   [constant 문서](/src/constant/README.md)
 -   [dto 문서](/src/dto/README.md)
 -   [endpoint 문서](/src/endpoint/README.md)
--   [enum 문서](/src/enum/README.md)
 -   [type 문서](/src/type/README.md)
 
 ## Q&A
