@@ -1,6 +1,6 @@
 {
     "name": "moyeo-object",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "모여! 개발에 사용되는 오브젝트(Entity, Dto) 라이브러리",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -11,7 +11,7 @@
     "private": false,
     "scripts": {
         "build": "rm -rf dist && tsc",
-        "publish": "npm publish"
+        "publish:npm": "yarn version && yarn build && npm publish"
     },
     "dependencies": {
         "class-validator": "^0.14.0",
