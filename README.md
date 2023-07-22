@@ -35,7 +35,6 @@ yarn add moyeo-object
 -   `constant`: 서비스에 사용되는 주요 상수 (필터링 조건 등)
 -   `dto`: 서비스에서 반복되어 사용되는 DTO (Data Transfer Object)
 -   `endpoint`: 서비스 API의 Endpoint DTO와 정보를 담은 객체
--   `entity`: 서비스에 사용되는 Entity
 -   `enum`: 서비스에 사용되는 Enum
 -   `type`: 서비스에 사용되는 Type
 
@@ -48,7 +47,6 @@ yarn add moyeo-object
 -   [constant 문서](/src/constant/README.md)
 -   [dto 문서](/src/dto/README.md)
 -   [endpoint 문서](/src/endpoint/README.md)
--   [entity 문서](/src/entity/README.md)
 -   [enum 문서](/src/enum/README.md)
 -   [type 문서](/src/type/README.md)
 
