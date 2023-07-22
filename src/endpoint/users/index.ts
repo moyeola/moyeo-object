@@ -1,14 +1,14 @@
-import { Endpoint } from 'endpoint-client';
-import { GroupDto, UserDto } from 'src/dto';
+import { Endpoint } from "endpoint-client";
+import { GroupDto, MemberDto, UserDto } from "src/dto";
 
 /**
  * GET /users/:userId
  * 유저 정보를 가져옵니다.
  */
 export const GetUser: Endpoint<GetUserReq, GetUserRes> = {
-    method: 'GET',
+    method: "GET",
     path: (e) => `/users/${e.userId}`,
-    pathParams: ['userId'],
+    pathParams: ["userId"],
 };
 
 export type GetUserReqPath = {
@@ -17,7 +17,9 @@ export type GetUserReqPath = {
 export type GetUserReq = GetUserReqPath;
 export type GetUserRes = {
     user: UserDto & {
-        groups: GroupDto[];
+        members: (MemberDto & {
+            group: GroupDto;
+        })[];
     };
 };
 
@@ -26,10 +28,10 @@ export type GetUserRes = {
  * 유저 정보를 수정합니다.
  */
 export const PatchUser: Endpoint<PatchUserReq, PatchUserRes> = {
-    method: 'PATCH',
+    method: "PATCH",
     path: (e) => `/users/${e.userId}`,
-    pathParams: ['userId'],
-    bodyParams: ['name', 'profileImageUrl'],
+    pathParams: ["userId"],
+    bodyParams: ["name", "profileImageUrl"],
 };
 export type PatchUserReqPath = {
     userId: string;
@@ -48,9 +50,9 @@ export type PatchUserRes = {
  * 유저를 삭제합니다.
  */
 export const DeleteUser: Endpoint<DeleteUserReq, DeleteUserRes> = {
-    method: 'DELETE',
+    method: "DELETE",
     path: (e) => `/users/${e.userId}`,
-    pathParams: ['userId'],
+    pathParams: ["userId"],
 };
 export type DeleteUserReqPath = {
     userId: string;
@@ -63,9 +65,9 @@ export type DeleteUserRes = {};
  * 유저를 검색합니다.
  */
 export const GetUsersSearch: Endpoint<GetUsersSearchReq, GetUsersSearchRes> = {
-    method: 'GET',
-    path: '/users/search',
-    queryParams: ['query', 'limit', 'offset'],
+    method: "GET",
+    path: "/users/search",
+    queryParams: ["query", "limit", "offset"],
 };
 export type GetUsersSearchReqQuery = {
     query: string;
