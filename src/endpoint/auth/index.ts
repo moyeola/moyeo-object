@@ -1,14 +1,13 @@
-import { Endpoint } from 'endpoint-client';
-import { AccessTokenPayload } from 'src/type';
+import { Endpoint } from "endpoint-client";
 
 /**
  * POST /auth/google
  * 구글 계정으로 로그인합니다
  */
 export const PostAuthGoogle: Endpoint<PostAuthGoogleReq, PostAuthGoogleRes> = {
-    method: 'POST',
-    path: '/auth/google',
-    bodyParams: ['token'],
+    method: "POST",
+    path: "/auth/google",
+    bodyParams: ["token"],
 };
 export interface PostAuthGoogleReqBody {
     token: string;
@@ -23,10 +22,15 @@ export interface PostAuthGoogleRes {
  * 토큰을 검증합니다
  */
 export const GetAuthToken: Endpoint<GetAuthTokenReq, GetAuthTokenRes> = {
-    method: 'GET',
-    path: '/auth/token',
+    method: "GET",
+    path: "/auth/token",
 };
 export type GetAuthTokenReq = {};
 export interface GetAuthTokenRes {
-    accessToken: AccessTokenPayload;
+    accessToken: {
+        userId: number;
+        type: "user";
+        version: "v1";
+        permissions: string[];
+    };
 }
