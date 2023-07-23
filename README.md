@@ -34,7 +34,6 @@ yarn add moyeo-object
 
 -   `dto`: 서비스에서 반복되어 사용되는 DTO (Data Transfer Object)
 -   `endpoint`: 서비스 API의 Endpoint DTO와 정보를 담은 객체
--   `type`: 서비스에 사용되는 Type
 
 각 객체들은 서로 연관관계를 가지고 있을 수 있습니다. (ex. endpoint에서 dto를 참조)
 
@@ -44,7 +43,6 @@ yarn add moyeo-object
 
 -   [dto 문서](/src/dto/README.md)
 -   [endpoint 문서](/src/endpoint/README.md)
--   [type 문서](/src/type/README.md)
 
 ## Q&A
 
