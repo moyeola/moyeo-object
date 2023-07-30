@@ -2,20 +2,16 @@ import { Endpoint } from "endpoint-client";
 import { GroupDto, MemberDto, UserDto } from "src/dto";
 
 /**
- * GET /users/:userId
+ * GET /users/me
  * 유저 정보를 가져옵니다.
  */
-export const GetUser: Endpoint<GetUserReq, GetUserRes> = {
+export const GetUserMe: Endpoint<GetUserMeReq, GetUserMeRes> = {
     method: "GET",
-    path: (e) => `/users/${e.userId}`,
-    pathParams: ["userId"],
+    path: (e) => `/users/me`,
 };
 
-export type GetUserReqPath = {
-    userId: string;
-};
-export type GetUserReq = GetUserReqPath;
-export type GetUserRes = {
+export type GetUserMeReq = {};
+export type GetUserMeRes = {
     user: UserDto & {
         members: (MemberDto & {
             group: GroupDto;
@@ -24,41 +20,34 @@ export type GetUserRes = {
 };
 
 /**
- * PATCH /users/:userId
+ * PATCH /users/me
  * 유저 정보를 수정합니다.
  */
-export const PatchUser: Endpoint<PatchUserReq, PatchUserRes> = {
+export const PatchUserMe: Endpoint<PatchUserMeReq, PatchUserMeRes> = {
     method: "PATCH",
-    path: (e) => `/users/${e.userId}`,
-    pathParams: ["userId"],
+    path: (e) => `/users/me`,
     bodyParams: ["name", "profileImageUrl"],
 };
-export type PatchUserReqPath = {
-    userId: string;
-};
-export type PatchUserReqBody = {
+export type PatchUserMeReqBody = {
     name?: string;
     profileImageUrl?: string;
 };
-export type PatchUserReq = PatchUserReqBody & PatchUserReqPath;
-export type PatchUserRes = {
+export type PatchUserMeReq = PatchUserMeReqBody;
+export type PatchUserMeRes = {
     user: UserDto;
 };
 
 /**
- * DELETE /users/:userId
+ * DELETE /users/me
  * 유저를 삭제합니다.
  */
-export const DeleteUser: Endpoint<DeleteUserReq, DeleteUserRes> = {
+export const DeleteUserMe: Endpoint<DeleteUserMeReq, DeleteUserMeRes> = {
     method: "DELETE",
-    path: (e) => `/users/${e.userId}`,
-    pathParams: ["userId"],
+    path: (e) => `/users/me`,
 };
-export type DeleteUserReqPath = {
-    userId: string;
-};
-export type DeleteUserReq = DeleteUserReqPath;
-export type DeleteUserRes = {};
+
+export type DeleteUserMeReq = {};
+export type DeleteUserMeRes = {};
 
 /**
  * GET /users/search
