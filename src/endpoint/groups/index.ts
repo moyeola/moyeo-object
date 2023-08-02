@@ -1,14 +1,14 @@
-import { Endpoint } from 'endpoint-client';
-import { GroupDto, MemberDto } from 'src/dto';
+import { Endpoint } from "endpoint-client";
+import { GroupDto, MemberDto } from "src/dto";
 
 /**
  * GET /groups/:groupId
  * 그룹 정보를 가져옵니다
  */
 export const GetGroup: Endpoint<GetGroupReq, GetGroupRes> = {
-    method: 'GET',
+    method: "GET",
     path: (e) => `/groups/${e.groupId}`,
-    pathParams: ['groupId'],
+    pathParams: ["groupId"],
 };
 export type GetGroupReqPath = {
     groupId: string;
@@ -24,17 +24,17 @@ export type GetGroupRes = {
  * POST /groups
  * 그룹을 생성합니다
  */
-export const PostGroups: Endpoint<PostGroupsReq, PostGroupsRes> = {
-    method: 'POST',
-    path: '/groups',
-    bodyParams: ['name', 'description'],
+export const PostGroup: Endpoint<PostGroupReq, PostGroupRes> = {
+    method: "POST",
+    path: "/groups",
+    bodyParams: ["name", "description"],
 };
-export type PostGroupsReqBody = {
+export type PostGroupReqBody = {
     name: string;
     description?: string;
 };
-export type PostGroupsReq = PostGroupsReqBody;
-export type PostGroupsRes = {
+export type PostGroupReq = PostGroupReqBody;
+export type PostGroupRes = {
     group: GroupDto;
 };
 
@@ -43,10 +43,10 @@ export type PostGroupsRes = {
  * 그룹 정보를 수정합니다
  */
 export const PatchGroup: Endpoint<PatchGroupReq, PatchGroupRes> = {
-    method: 'PATCH',
+    method: "PATCH",
     path: (e) => `/groups/${e.groupId}`,
-    pathParams: ['groupId'],
-    bodyParams: ['name', 'description'],
+    pathParams: ["groupId"],
+    bodyParams: ["name", "description"],
 };
 export type PatchGroupReqPath = {
     groupId: string;
@@ -65,9 +65,9 @@ export type PatchGroupRes = {
  * 그룹을 삭제합니다
  */
 export const DeleteGroup: Endpoint<DeleteGroupReq, DeleteGroupRes> = {
-    method: 'DELETE',
+    method: "DELETE",
     path: (e) => `/groups/${e.groupId}`,
-    pathParams: ['groupId'],
+    pathParams: ["groupId"],
 };
 export type DeleteGroupReqPath = {
     groupId: string;
@@ -81,9 +81,9 @@ export type DeleteGroupRes = {};
  */
 export const GetGroupsSearch: Endpoint<GetGroupsSearchReq, GetGroupsSearchRes> =
     {
-        method: 'GET',
-        path: '/groups/search',
-        queryParams: ['query', 'limit', 'offset'],
+        method: "GET",
+        path: "/groups/search",
+        queryParams: ["query", "limit", "offset"],
     };
 export type GetGroupsSearchReqQuery = {
     query: string;
