@@ -11,16 +11,16 @@ export type FileCategory =
     | "resources/app"
     | "resources/other";
 
-export const PostFiles: Endpoint<PostFilesReq, PostFilesRes> = {
+export const PostFile: Endpoint<PostFileReq, PostFileRes> = {
     method: "POST",
     path: "/files",
     bodyParams: ["file", "category"],
 };
-export type PostFilesReqBody = {
+export type PostFileReqBody = {
     file: any;
     category: FileCategory;
 };
-export type PostFilesReq = PostFilesReqBody;
-export type PostFilesRes = {
+export type PostFileReq = PostFileReqBody;
+export type PostFileRes = {
     url: string;
 };
