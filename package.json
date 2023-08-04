@@ -1,6 +1,6 @@
 {
     "name": "moyeo-object",
-    "version": "0.5.4",
+    "version": "0.5.5",
     "description": "모여! 개발에 사용되는 오브젝트(Entity, Dto) 라이브러리",
     "main": "dist/index.js",
     "module": "dist/index.js",
