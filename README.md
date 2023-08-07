@@ -30,7 +30,7 @@ yarn add moyeo-object
 
 ## 라이브러리 소개
 
-`moyeo-object` 라이브러리는 크게 6가지로 분류되어 사용됩니다.
+`moyeo-object` 라이브러리는 크게 2가지로 분류되어 사용됩니다.
 
 -   `dto`: 서비스에서 반복되어 사용되는 DTO (Data Transfer Object)
 -   `endpoint`: 서비스 API의 Endpoint DTO와 정보를 담은 객체
