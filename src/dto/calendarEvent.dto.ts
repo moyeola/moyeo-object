@@ -1,5 +1,3 @@
-import { CalendarDto } from "./calendar.dto";
-
 export type CalendarEventDto = {
     id: number;
     calendarId: number;
