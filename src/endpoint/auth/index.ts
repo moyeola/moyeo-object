@@ -7,10 +7,11 @@ import { Endpoint } from "endpoint-client";
 export const PostAuthGoogle: Endpoint<PostAuthGoogleReq, PostAuthGoogleRes> = {
     method: "POST",
     path: "/auth/google",
-    bodyParams: ["token"],
+    bodyParams: ["token", "redirectUri"],
 };
 export interface PostAuthGoogleReqBody {
     token: string;
+    redirectUri?: string;
 }
 export type PostAuthGoogleReq = PostAuthGoogleReqBody;
 export interface PostAuthGoogleRes {
