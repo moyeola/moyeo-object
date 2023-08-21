@@ -1,5 +1,7 @@
 # Update
 
+moyeo-object 라이브러리의 변경사항을 기록합니다. [Notion 문서](https://www.notion.so/32aed8bf42344d698e7430326b3037ad)
+
 ## v0.6.2
 
 -   Endpoint
@@ -27,3 +29,50 @@
 -   Endpoint
     -   일정조율과 관련한 엔드포인트 정의를 추가했어요.
         -   추가된 엔드포인트: `PostMeet`, `GetMeet`, `PatchMeet`, `DeleteMeet`, `PostMeetResponse`, `PatchMeetResponse`, `DeleteMeetResponse`
+
+## v0.5.7
+
+-   엔드포인트
+    -   `POST /auth/google`의 `ReqBody`에 `redirectUri` 추가
+
+## v0.5.6
+
+-   엔드포인트
+
+    -   Calendar 관련 엔드포인트 추가
+
+        ```typescript
+        GET /calendars
+        GET /calendars/:calendarId
+        PATCH /calendars/:calendarId
+        GET /calendars/:calendarId/events
+        POST /calendars/:calendarId/events
+        PATCH /calendars/:calendarId/events/:eventId
+        DELETE /calendars/:calendarId/events/:eventId
+        ```
+
+## v0.5.5
+
+-   엔드포인트
+    -   `POST /files` 엔드포인트 변경
+
+## v0.5.4
+
+-   엔드포인트
+    -   `PostFiles` 의 이름이 `PostFile` 로 변경되었습니다. (단순 오타 수정)
+
+## v0.5.0
+
+-   엔드포인트
+
+    -   엔드포인트 변경
+
+        -   `GET /users/:userId` → `GET /users/me`
+        -   `PATCH /users/:userId` → `PATCH /users/me`
+        -   `DELETE /users/:userId` → `DELETE /users/me`
+
+    -   ADD: `POST /dev/access-token`, `POST /dev/auth`
+
+    -   `/users` 관련 엔드포인트에서 `:userId` 가 `me` 로 대부분 대체되었습니다.
+
+        일반적인 상황에서 자신이 아닌 다른 유저의 정보를 수정하거나 삭제할 일이 없고, 운영진의 경우 별도의 엔드포인트를 제공할 예정입니다.
