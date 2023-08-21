@@ -87,8 +87,8 @@ export const GetGroupsSearch: Endpoint<GetGroupsSearchReq, GetGroupsSearchRes> =
     };
 export type GetGroupsSearchReqQuery = {
     query: string;
-    limit: number;
-    offset: number;
+    limit?: number;
+    offset?: number;
 };
 export type GetGroupsSearchReq = GetGroupsSearchReqQuery;
 export type GetGroupsSearchRes = {

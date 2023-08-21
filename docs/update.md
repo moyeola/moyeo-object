@@ -1,5 +1,11 @@
 # Update
 
+## v0.6.2
+
+-   Endpoint
+    -   `PostMeetResponseReqBody`를 일부 변경했어요.
+    -   `GetGroupsSearchReqQuery`를 일부 변경했어요.
+
 ## v0.6.1
 
 -   Endpoint

@@ -11,17 +11,27 @@ export const PostMeetResponse: Endpoint<
     method: "POST",
     path: (e) => `/meets/${e.meetId}/responses`,
     pathParams: ["meetId"],
-    bodyParams: ["responserType", "guest", "times"],
+    bodyParams: ["responser", "times"],
 };
 export type PostMeetResponseReqPath = {
     meetId: string;
 };
 export type PostMeetResponseReqBody = {
-    responserType: "user" | "member" | "guest";
-    guest?: {
-        name: string;
-        email: string;
-    };
+    responser:
+        | {
+              type: "user";
+          }
+        | {
+              type: "member";
+              memberId: number;
+          }
+        | {
+              type: "guest";
+              guest: {
+                  name: string;
+                  email: string;
+              };
+          };
     times: {
         start: string;
         end: string;
