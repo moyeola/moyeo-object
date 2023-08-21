@@ -18,8 +18,7 @@ export type MeetDto = {
               user?: UserDto;
           }
         | {
-              type: "group";
-              group?: GroupDto;
+              type: "member";
               member?: MemberDto;
           };
 };

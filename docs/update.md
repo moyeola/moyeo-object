@@ -2,6 +2,16 @@
 
 moyeo-object 라이브러리의 변경사항을 기록합니다. [Notion 문서](https://www.notion.so/32aed8bf42344d698e7430326b3037ad)
 
+## v0.6.3
+
+-   Dto
+
+    -   `MeetDto` 를 변경했어요. (creator에서 type: group을 type member로 수정)
+
+-   Endpoint
+
+    -   `PostMeetReqBody` 를 일부 변경헀어요. (creatorType, groupId -> creator)
+
 ## v0.6.2
 
 -   Endpoint

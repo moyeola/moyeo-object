@@ -16,8 +16,7 @@ export const PostMeet: Endpoint<PostMeetReq, PostMeetRes> = {
         "dates",
         "startTimeAt",
         "endTimeAt",
-        "creatorType",
-        "groupId",
+        "creator",
     ],
 };
 export type PostMeetReqBody = {
@@ -26,8 +25,14 @@ export type PostMeetReqBody = {
     dates: string[];
     startTimeAt: string;
     endTimeAt: string;
-    creatorType: "user" | "group";
-    groupId?: number;
+    creator:
+        | {
+              type: "user";
+          }
+        | {
+              type: "member";
+              memberId: number;
+          };
 };
 export type PostMeetReq = PostMeetReqBody;
 export type PostMeetRes = {};
