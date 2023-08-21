@@ -4,6 +4,6 @@ export type GroupDto = {
     id: number;
     name: string;
     description?: string;
-
     members?: MemberDto[];
+    createdAt: string;
 };

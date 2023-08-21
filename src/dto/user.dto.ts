@@ -8,6 +8,6 @@ export type UserDto = {
     permissions: {
         permission: "ADMIN";
     }[];
-
     members?: MemberDto[];
+    createdAt: string;
 };
