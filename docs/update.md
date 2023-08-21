@@ -1,5 +1,10 @@
 # Update
 
+## v0.6.1
+
+-   Endpoint
+    -   `GetMeets` 엔드포인트를 추가했어요.
+
 ## v0.6.0
 
 -   Dto

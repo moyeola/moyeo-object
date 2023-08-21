@@ -50,6 +50,29 @@ export type GetMeetRes = {
 };
 
 /**
+ * GET /meets
+ * 일정조율 목록을 가져옵니다.
+ */
+export const GetMeets: Endpoint<GetMeetsReq, GetMeetsRes> = {
+    method: "GET",
+    path: "/meets",
+    queryParams: ["creator"],
+};
+export type GetMeetsReq = {
+    creator?:
+        | {
+              type: "user";
+          }
+        | {
+              type: "group";
+              groupId: number;
+          };
+};
+export type GetMeetsRes = {
+    meets: MeetDto[];
+};
+
+/**
  * PATCH /meets/:meetId
  * 일정조율을 수정합니다.
  */
