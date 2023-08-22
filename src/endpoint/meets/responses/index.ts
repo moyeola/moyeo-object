@@ -1,4 +1,24 @@
 import { Endpoint } from "endpoint-client";
+import { MeetResponseDto } from "src/dto";
+
+/**
+ * GET /meets/:meetId/responses/:responseId
+ * 일정조율 응답을 조회합니다.
+ */
+export const GetMeetResponse: Endpoint<GetMeetResponseReq, GetMeetResponseRes> =
+    {
+        method: "GET",
+        path: (e) => `/meets/${e.meetId}/responses/${e.responseId}`,
+        pathParams: ["meetId", "responseId"],
+    };
+export type GetMeetResponseReqPath = {
+    meetId: string;
+    responseId: string;
+};
+export type GetMeetResponseReq = GetMeetResponseReqPath;
+export type GetMeetResponseRes = {
+    meetResponse: MeetResponseDto;
+};
 
 /**
  * POST /meets/:meetId/responses
