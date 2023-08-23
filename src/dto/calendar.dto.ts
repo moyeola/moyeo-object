@@ -3,6 +3,7 @@ import { UserDto } from "./user.dto";
 
 export type CalendarDto = {
     id: number;
+    name: string;
     owner:
         | {
               type: "user";
