@@ -1,4 +1,5 @@
 import { Endpoint } from "endpoint-client";
+import { UserDto } from "src/dto";
 
 /**
  * POST /dev/auth
@@ -38,4 +39,23 @@ export type PostDevAccessTokenReqBody = {
 export type PostDevAccessTokenReq = PostDevAccessTokenReqBody;
 export type PostDevAccessTokenRes = {
     accessToken: string;
+};
+
+/**
+ * POST /dev/user
+ * 임의의 유저를 생성합니다
+ */
+export const PostDevUser: Endpoint<PostDevUserReq, PostDevUserRes> = {
+    method: "POST",
+    path: "/dev/user",
+    bodyParams: ["name", "profileImageUrl"],
+};
+export type PostDevUserReqBody = {
+    name: string;
+    profileImageUrl?: string;
+};
+export type PostDevUserReq = PostDevUserReqBody;
+export type PostDevUserRes = {
+    user: UserDto;
+    token: string;
 };
