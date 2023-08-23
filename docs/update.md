@@ -5,7 +5,12 @@ moyeo-object 라이브러리의 변경사항을 기록합니다. [Notion 문서]
 ## v0.6.5
 
 -   Dto
+
     -   `CalendarDto`에 name 속성을 추가했어요.
+
+-   Endpoint
+    -   `PatchCalendarReqBody`에 name 속성을 추가했어요.
+    -   `PostDevUser` 엔드포인트를 추가했어요.
 
 ## v0.6.4
 
