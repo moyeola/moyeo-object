@@ -25,7 +25,9 @@ export const PatchCalendar: Endpoint<PatchCalendarReq, PatchCalendarRes> = {
     path: (e) => `/calendars/${e.calendarId}`,
     bodyParams: [],
 };
-export type PatchCalendarReqBody = {};
+export type PatchCalendarReqBody = {
+    name?: string;
+};
 export type PatchCalendarReq = PatchCalendarReqBody & {
     calendarId: number;
 };
