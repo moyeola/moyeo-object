@@ -1,5 +1,5 @@
 import { Endpoint } from "endpoint-client";
-import { MeetResponseDto } from "src/dto";
+import { MeetResponseDto } from "../../../dto";
 
 /**
  * GET /meets/:meetId/responses/:responseId

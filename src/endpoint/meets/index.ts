@@ -1,5 +1,5 @@
 import { Endpoint } from "endpoint-client";
-import { MeetDto } from "src/dto/meet.dto";
+import { MeetDto } from "../../dto/meet.dto";
 
 export * from "./responses";
 

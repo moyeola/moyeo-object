@@ -1,4 +1,4 @@
-import { ReportDto } from "src/dto/report.dto";
+import { ReportDto } from "../../../dto/report.dto";
 import { Endpoint } from "endpoint-client";
 
 /**

@@ -1,5 +1,5 @@
 import { Endpoint } from "endpoint-client";
-import { CalendarDto } from "src/dto";
+import { CalendarDto } from "../../dto";
 
 export * from "./event";
 

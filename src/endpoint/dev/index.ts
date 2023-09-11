@@ -1,5 +1,5 @@
 import { Endpoint } from "endpoint-client";
-import { UserDto } from "src/dto";
+import { UserDto } from "../../dto";
 
 /**
  * POST /dev/auth

@@ -1,5 +1,5 @@
 import { Endpoint } from "endpoint-client";
-import { GroupDto, MemberDto, UserDto } from "src/dto";
+import { GroupDto, MemberDto, UserDto } from "../../dto";
 
 /**
  * GET /users/me

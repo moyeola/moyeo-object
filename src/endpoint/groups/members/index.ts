@@ -1,5 +1,5 @@
-import { Endpoint } from 'endpoint-client';
-import { MemberDto } from 'src/dto';
+import { Endpoint } from "endpoint-client";
+import { MemberDto } from "../../../dto";
 
 /**
  * GET /groups/:groupId/members
@@ -7,9 +7,9 @@ import { MemberDto } from 'src/dto';
  */
 export const GetGroupMembers: Endpoint<GetGroupMembersReq, GetGroupMembersRes> =
     {
-        method: 'GET',
+        method: "GET",
         path: (e) => `/groups/${e.groupId}/members`,
-        pathParams: ['groupId'],
+        pathParams: ["groupId"],
     };
 export type GetGroupMembersReqPath = {
     groupId: string;
@@ -27,10 +27,10 @@ export const PostGroupMembers: Endpoint<
     PostGroupMembersReq,
     PostGroupMembersRes
 > = {
-    method: 'POST',
+    method: "POST",
     path: (e) => `/groups/${e.groupId}/members`,
-    pathParams: ['groupId'],
-    bodyParams: ['userId'],
+    pathParams: ["groupId"],
+    bodyParams: ["userId"],
 };
 export type PostGroupMembersReqPath = {
     groupId: string;
@@ -49,9 +49,9 @@ export type PostGroupMembersRes = {
  * 그룹의 멤버 정보를 가져옵니다
  */
 export const GetGroupMember: Endpoint<GetGroupMemberReq, GetGroupMemberRes> = {
-    method: 'GET',
+    method: "GET",
     path: (e) => `/groups/${e.groupId}/members/${e.memberId}`,
-    pathParams: ['groupId', 'memberId'],
+    pathParams: ["groupId", "memberId"],
 };
 export type GetGroupMemberReqPath = {
     groupId: string;
@@ -70,9 +70,9 @@ export const DeleteGroupMember: Endpoint<
     DeleteGroupMemberReq,
     DeleteGroupMemberRes
 > = {
-    method: 'DELETE',
+    method: "DELETE",
     path: (e) => `/groups/${e.groupId}/members/${e.memberId}`,
-    pathParams: ['groupId', 'memberId'],
+    pathParams: ["groupId", "memberId"],
 };
 export type DeleteGroupMemberReqPath = {
     groupId: string;
@@ -89,9 +89,9 @@ export const PatchGroupMember: Endpoint<
     PatchGroupMemberReq,
     PatchGroupMemberRes
 > = {
-    method: 'PATCH',
+    method: "PATCH",
     path: (e) => `/groups/${e.groupId}/members/${e.memberId}`,
-    pathParams: ['groupId', 'memberId'],
+    pathParams: ["groupId", "memberId"],
 };
 export type PatchGroupMemberReqPath = {
     groupId: string;
