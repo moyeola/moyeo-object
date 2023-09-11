@@ -17,6 +17,24 @@ export type GetCalendarsRes = {
 };
 
 /**
+ * GET /calendars/search
+ * 캘린더를 검색합니다.
+ */
+export const SearchCalendars: Endpoint<SearchCalendarsReq, SearchCalendarsRes> =
+    {
+        method: "GET",
+        path: (e) => `/calendars/search`,
+        queryParams: ["ownerId", "ownerType"],
+    };
+export type SearchCalendarsReq = {
+    ownerId?: number;
+    ownerType?: "user" | "group";
+};
+export type SearchCalendarsRes = {
+    calendars: CalendarDto[];
+};
+
+/**
  * PATCH /calendars/:calendarId
  * 캘린더를 수정합니다.
  */
