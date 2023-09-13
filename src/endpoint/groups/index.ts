@@ -48,7 +48,7 @@ export const PatchGroup: Endpoint<PatchGroupReq, PatchGroupRes> = {
     method: "PATCH",
     path: (e) => `/groups/${e.groupId}`,
     pathParams: ["groupId"],
-    bodyParams: ["name", "description"],
+    bodyParams: ["name", "description", "status"],
 };
 export type PatchGroupReqPath = {
     groupId: string;
@@ -56,6 +56,7 @@ export type PatchGroupReqPath = {
 export type PatchGroupReqBody = {
     name?: string;
     description?: string;
+    status?: "ACTIVE" | "INACTIVE";
 };
 export type PatchGroupReq = PatchGroupReqBody & PatchGroupReqPath;
 export type PatchGroupRes = {
