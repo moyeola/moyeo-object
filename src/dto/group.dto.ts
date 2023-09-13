@@ -6,4 +6,5 @@ export type GroupDto = {
     description?: string;
     members?: MemberDto[];
     createdAt: string;
+    status: "ACTIVE" | "INACTIVE";
 };
