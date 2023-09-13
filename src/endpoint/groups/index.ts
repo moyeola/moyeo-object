@@ -1,6 +1,8 @@
 import { Endpoint } from "endpoint-client";
 import { GroupDto, MemberDto } from "../../dto";
 
+export * from "./members";
+
 /**
  * GET /groups/:groupId
  * 그룹 정보를 가져옵니다
