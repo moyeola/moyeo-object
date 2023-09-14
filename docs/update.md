@@ -2,6 +2,31 @@
 
 moyeo-object 라이브러리의 변경사항을 기록합니다. [Notion 문서](https://www.notion.so/32aed8bf42344d698e7430326b3037ad)
 
+## v0.6.10
+
+-   Endpoint
+    -   `PatchGroup` 에 `status` 필드를 추가했어요.
+
+## v0.6.9
+
+-   Dto
+    -   `GroupDto`에 `status` 필드를 추가했어요.
+
+## v0.6.8
+
+-   Endpoint
+    -   누락된 GroupMember 계정 Endpoint를 export 했어요.
+
+## v0.6.7
+
+-   Endpoint
+    -   `GET /calendars/search` 를 추가했어요
+
+## v0.6.6
+
+-   Bug
+    -   import 에서 "src/..." 형식으로 import 되서 문제가 발생하던 버그를 해결했어요.
+
 ## v0.6.5
 
 -   Dto
