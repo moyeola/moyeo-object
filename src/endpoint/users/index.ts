@@ -1,6 +1,9 @@
 import { Endpoint } from "endpoint-client";
 import { GroupDto, MemberDto, UserDto } from "../../dto";
 
+export * from "./notifications";
+export * from "./report";
+
 /**
  * GET /users/me
  * 유저 정보를 가져옵니다.

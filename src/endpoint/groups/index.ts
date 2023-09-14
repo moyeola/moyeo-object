@@ -2,6 +2,7 @@ import { Endpoint } from "endpoint-client";
 import { GroupDto, MemberDto } from "../../dto";
 
 export * from "./members";
+export * from "./notifications";
 
 /**
  * GET /groups/:groupId

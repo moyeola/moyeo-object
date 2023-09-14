@@ -6,3 +6,4 @@ export * from "./calendar.dto";
 export * from "./calendarEvent.dto";
 export * from "./meet.dto";
 export * from "./meetResponse.dto";
+export * from "./notification.dto";
