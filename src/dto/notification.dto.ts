@@ -8,13 +8,17 @@ export type NotificationAction = {
     type: "to";
     url: string;
 };
+export type NotificationAuthor = {
+    type: "group" | "moyeo";
+    id: number;
+    name: string;
+};
 
 export type NotificationDto = {
     id: number;
     title: string;
     body: string;
-    author: string;
-    type: NotificationType;
+    author: NotificationAuthor;
     action: NotificationAction;
     createdAt: string;
 };
