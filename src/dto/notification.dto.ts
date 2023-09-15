@@ -18,6 +18,7 @@ export type NotificationDto = {
     title: string;
     body: string;
     author: NotificationAuthor;
+    type: NotificationType;
     action: NotificationAction;
     createdAt: string;
 };
