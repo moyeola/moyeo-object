@@ -1,15 +1,14 @@
 export type NotificationType =
-    | "group_schedule"
-    | "meet_requested"
-    | "moyeo_update";
+    | "GROUP_SCHEDULE"
+    | "MEET_REQUEST"
+    | "MOYEO_NOTICE";
 
-export type NotificationActionType = "to";
 export type NotificationAction = {
     type: "to";
     url: string;
 };
 export type NotificationAuthor = {
-    type: "group" | "moyeo";
+    type: "GROUP" | "MOYEO";
     id: number;
     name: string;
 };
