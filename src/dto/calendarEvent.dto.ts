@@ -1,7 +1,6 @@
 export type CalendarEventDto = {
     id: number;
     calendarId: number;
-    creatorId: number;
     title: string;
     description?: string;
     location?: string;

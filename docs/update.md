@@ -2,6 +2,11 @@
 
 moyeo-object 라이브러리의 변경사항을 기록합니다. [Notion 문서](https://www.notion.so/32aed8bf42344d698e7430326b3037ad)
 
+## v0.6.15
+
+-   Dto
+    -   `MeetResponseDto`에 times가 배열이 아닌 문제를 수정했어요.
+
 ## v0.6.14
 
 -   Dto

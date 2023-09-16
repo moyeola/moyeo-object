@@ -24,6 +24,6 @@ export type MeetResponseDto = {
     times: {
         start: string;
         end: string;
-    };
+    }[];
     createdAt: string;
 };
