@@ -61,17 +61,11 @@ export type GetMeetRes = {
 export const GetMeets: Endpoint<GetMeetsReq, GetMeetsRes> = {
     method: "GET",
     path: "/meets",
-    queryParams: ["creator"],
+    queryParams: ["creatorId", "creatorType"],
 };
 export type GetMeetsReq = {
-    creator?:
-        | {
-              type: "user";
-          }
-        | {
-              type: "group";
-              groupId: number;
-          };
+    creatorType?: "user" | "member";
+    creatorId?: number;
 };
 export type GetMeetsRes = {
     meets: MeetDto[];
