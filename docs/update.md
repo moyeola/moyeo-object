@@ -2,9 +2,14 @@
 
 moyeo-object 라이브러리의 변경사항을 기록합니다. [Notion 문서](https://www.notion.so/32aed8bf42344d698e7430326b3037ad)
 
+## v0.6.20
+
+-   Endpoint
+    -   `GetMeets`에 status가 포함되지 않은 문제를 해결했어요.
+
 ## v0.6.19
 
--   Dto
+-   Endpoint
     -   `GetMeetsReq`에 status를 추가했어요.
 
 ## v0.6.18
