@@ -2,6 +2,20 @@
 
 moyeo-object 라이브러리의 변경사항을 기록합니다. [Notion 문서](https://www.notion.so/32aed8bf42344d698e7430326b3037ad)
 
+## v0.6.18
+
+-   Dto
+
+    -   `MeetDto`에 status 속성을 추가했어요.
+
+-   Endpoint
+    -   `PatchMeetReqBody`에 status 속성을 추가했어요.
+
+## v0.6.17
+
+-   Endpoint
+    -   `GetMeets`의 creatorType에 'group'을 추가했어요.
+
 ## v0.6.16
 
 -   Endpoint

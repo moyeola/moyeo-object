@@ -11,6 +11,7 @@ export type MeetDto = {
     dates: string[];
     startTimeAt: string;
     endTimeAt: string;
+    status: "PROGRESSING" | "CONFIRMED" | "CANCELED";
     responses: MeetResponseDto[];
     creator:
         | {

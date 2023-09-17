@@ -64,7 +64,7 @@ export const GetMeets: Endpoint<GetMeetsReq, GetMeetsRes> = {
     queryParams: ["creatorId", "creatorType"],
 };
 export type GetMeetsReq = {
-    creatorType?: "user" | "member";
+    creatorType?: "user" | "member" | "group";
     creatorId?: number;
 };
 export type GetMeetsRes = {
@@ -79,7 +79,14 @@ export const PatchMeet: Endpoint<PatchMeetReq, PatchMeetRes> = {
     method: "PATCH",
     path: (e) => `/meets/${e.meetId}`,
     pathParams: ["meetId"],
-    bodyParams: ["title", "description", "dates", "startTimeAt", "endTimeAt"],
+    bodyParams: [
+        "title",
+        "description",
+        "dates",
+        "startTimeAt",
+        "endTimeAt",
+        "status",
+    ],
 };
 export type PatchMeetReqPath = {
     meetId: string;
@@ -90,6 +97,7 @@ export type PatchMeetReqBody = {
     dates?: string[];
     startTimeAt?: string;
     endTimeAt?: string;
+    status?: "PROGRESSING" | "CONFIRMED" | "CANCELED";
 };
 export type PatchMeetReq = PatchMeetReqBody & PatchMeetReqPath;
 export type PatchMeetRes = {};
