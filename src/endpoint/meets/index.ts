@@ -66,6 +66,7 @@ export const GetMeets: Endpoint<GetMeetsReq, GetMeetsRes> = {
 export type GetMeetsReq = {
     creatorType?: "user" | "member" | "group";
     creatorId?: number;
+    status?: "PROGRESSING" | "CONFIRMED" | "CANCELED";
 };
 export type GetMeetsRes = {
     meets: MeetDto[];
