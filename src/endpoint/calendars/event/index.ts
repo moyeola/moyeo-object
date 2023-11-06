@@ -23,6 +23,26 @@ export type GetCalendarEventsRes = {
 };
 
 /**
+ * GET /calendars/:calendarId/events/:eventId
+ * 캘린더 이벤트를 가져옵니다.
+ */
+export const GetCalendarEvent: Endpoint<
+    GetCalendarEventReq,
+    GetCalendarEventRes
+> = {
+    method: "GET",
+    path: (e) => `/calendars/${e.calendarId}/events/${e.eventId}`,
+    pathParams: ["eventId", "calendarId"],
+};
+export type GetCalendarEventReq = {
+    calendarId: number;
+    eventId: number;
+};
+export type GetCalendarEventRes = {
+    event: CalendarEventDto;
+};
+
+/**
  * POST /calendars/:calendarId/events
  * 캘린더 이벤트를 생성합니다.
  */
