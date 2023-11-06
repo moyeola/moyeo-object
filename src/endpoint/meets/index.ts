@@ -35,7 +35,9 @@ export type PostMeetReqBody = {
           };
 };
 export type PostMeetReq = PostMeetReqBody;
-export type PostMeetRes = {};
+export type PostMeetRes = {
+    meet: MeetDto;
+};
 
 /**
  * GET /meets/:meetId
@@ -101,7 +103,9 @@ export type PatchMeetReqBody = {
     status?: "PROGRESSING" | "CONFIRMED" | "CANCELED";
 };
 export type PatchMeetReq = PatchMeetReqBody & PatchMeetReqPath;
-export type PatchMeetRes = {};
+export type PatchMeetRes = {
+    meet: MeetDto;
+};
 
 /**
  * DELETE /meets/:meetId
