@@ -98,3 +98,41 @@ export type GetGroupsSearchReq = GetGroupsSearchReqQuery;
 export type GetGroupsSearchRes = {
     groups: GroupDto[];
 };
+
+/**
+ * GET /groups/:groupId/invite-code
+ * 그룹 초대 코드를 가져옵니다
+ */
+export const GetGroupInviteCode: Endpoint<
+    GetGroupInviteCodeReq,
+    GetGroupInviteCodeRes
+> = {
+    method: "GET",
+    path: (e) => `/groups/${e.groupId}/invite-code`,
+    pathParams: ["groupId"],
+};
+export type GetGroupInviteCodeReqPath = {
+    groupId: string;
+};
+export type GetGroupInviteCodeReq = GetGroupInviteCodeReqPath;
+export type GetGroupInviteCodeRes = {
+    inviteCode: string;
+};
+
+/**
+ * POST /groups/invite
+ * 그룹 초대 코드를 통해 그룹에 가입합니다
+ */
+export const PostGroupInvite: Endpoint<PostGroupInviteReq, PostGroupInviteRes> =
+    {
+        method: "POST",
+        path: "/groups/invite",
+        bodyParams: ["inviteCode"],
+    };
+export type PostGroupInviteReqBody = {
+    inviteCode: string;
+};
+export type PostGroupInviteReq = PostGroupInviteReqBody;
+export type PostGroupInviteRes = {
+    member: MemberDto;
+};
