@@ -1,5 +1,7 @@
 import { Endpoint } from "endpoint-client";
-import { NotificationDto } from "src/dto";
+import { NotificationDto } from "../../../dto";
+
+export * from "./register";
 
 /**
  * GET /users/me/notifications
