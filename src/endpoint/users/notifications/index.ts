@@ -2,7 +2,7 @@ import { Endpoint } from "endpoint-client";
 import { NotificationDto } from "src/dto";
 
 /**
- * GET /users/me/notification
+ * GET /users/me/notifications
  * 유저의 알림을 가져옵니다.
  */
 export const GetUserMeNotifications: Endpoint<
@@ -23,7 +23,7 @@ export type GetUserMeNotificationsRes = {
 };
 
 /**
- * DELETE /users/me/notification/:notificationId
+ * DELETE /users/me/notifications/:notificationId
  * 유저의 알림을 삭제합니다.
  */
 export const DeleteUserMeNotification: Endpoint<
