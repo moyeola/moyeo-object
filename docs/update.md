@@ -2,6 +2,11 @@
 
 moyeo-object 라이브러리의 변경사항을 기록합니다. [Notion 문서](https://www.notion.so/32aed8bf42344d698e7430326b3037ad)
 
+## v0.6.26
+
+-   Endpoint
+    -   `PostUserMeNotificationRegister`의 잘못된 주소를 수정했어요.
+
 ## v0.6.25
 
 -   Endpoint

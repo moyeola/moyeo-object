@@ -1,7 +1,7 @@
 import { Endpoint } from "endpoint-client";
 
 /**
- * POST /notifications/register
+ * POST /users/me/notifications/register
  * 유저의 알림을 등록합니다.
  */
 export const PostUserMeNotificationRegister: Endpoint<
@@ -9,7 +9,7 @@ export const PostUserMeNotificationRegister: Endpoint<
     PostUserMeNotificationRegisterRes
 > = {
     method: "POST",
-    path: (e) => `/notifications/register`,
+    path: (e) => `/users/me/notifications/register`,
     bodyParams: ["token"],
 };
 export type PostUserMeNotificationRegisterReqBody = {
