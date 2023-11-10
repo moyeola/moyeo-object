@@ -2,6 +2,7 @@ import { Endpoint } from "endpoint-client";
 import { MeetDto } from "../../dto/meet.dto";
 
 export * from "./responses";
+export * from "./expedite";
 
 /**
  * POST /meets

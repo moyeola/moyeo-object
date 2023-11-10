@@ -2,6 +2,11 @@
 
 moyeo-object 라이브러리의 변경사항을 기록합니다. [Notion 문서](https://www.notion.so/32aed8bf42344d698e7430326b3037ad)
 
+## v0.6.27
+
+-   Endpoint
+    -   `PostMeetExpedite` 추가
+
 ## v0.6.26
 
 -   Endpoint
